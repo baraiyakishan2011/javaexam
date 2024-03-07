@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <label>admin name:</label>
+       <input type="text" id=" name">
+
+       <label> password:</label>
+       <input type="text" id="password">
+
+
+       <button onclick="Submit()">submit</button>
+
+       <script>
+
+    let admin = "kishan"
+    let pass = "2011";
+
+    function submit(){
+         let k_name = document.getElementById("name").value;
+         let b_password = document.getElementById("password").value;
+
+         if(admin=== k_name){
+             if(pass == b_password){
+              document.getElementById("title").innerHTML="login success";
+             location.href="rec.html";
+             document.getElementById("title").style.color="green";
+
+             }
+           else{
+                document.getElementById("title").innerHTML="Enter valid password";
+                document.getElementById("title").style.color="red";
+            }
+
+            }
+
+          else{
+              document.getElementById("title").innerHTML="Enter valid username";
+              document.getElementById("title").style.color="red";
+            }
+
+           }
+           </script>
+
+
+</body>
+</html>
